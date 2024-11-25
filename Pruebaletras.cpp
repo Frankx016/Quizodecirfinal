@@ -26,4 +26,23 @@ void main(void)
         contadorpalabras++;
         printf("\n");
     }
+    char abecedario[] = "abcdefghijklmnñopqrstuvwxyzáéíóú";
+
+    int longitud = strlen(palabra);
+    for (int i = 0; i <= longitud; i++)
+    {
+        for (int j = 0; abecedario[j] != '\0'; j++)
+        {
+            for (int k = 0; k < i; k++)
+            {
+                printf("%c", palabra[k]); 
+            }
+            printf("%c", abecedario[j]);
+            for (int k = i; k < longitud; k++)
+            {
+                printf("%c", palabra[k]); 
+            }
+            printf("\n");
+        }
+    }
 }
