@@ -24,4 +24,26 @@ void main(void)
             }
         }
     }
+    int temppeso;
+    char temppalabra;
+    for (i = 0; i < iNumLista - 1; i++)
+
+    {
+        for (j = 0; j < iNumLista - i - 1; j++)
+        {
+            if (peso[j] < peso[j + 1])
+            {
+
+                temppeso = peso[j];
+                peso[j] = peso[j + 1];
+                peso[j + 1] = temppeso;
+
+
+
+                strcpy_s(temppalabra, lista[j]);
+                strcpy_s(lista[j], lista[j + 1]);
+                strcpy_s(lista[j + 1], temppalabra);
+            }
+        }
+    }
 }
